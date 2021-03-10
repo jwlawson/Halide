@@ -104,7 +104,7 @@ struct x86Intrinsic {
     Target::Feature feature = Target::FeatureEnd;
     uint32_t flags = 0;
     enum Options {
-      AccessesMemory = 1 << 1,
+        AccessesMemory = 1 << 1,
     };
 };
 
@@ -224,8 +224,8 @@ void CodeGen_X86::init_module() {
         }
 
         auto *fn = declare_intrin_overload(i.name, ret_type, i.intrin_name, std::move(arg_types));
-        if((i.flags & x86Intrinsic::AccessesMemory) == 0) {
-          fn->addFnAttr(llvm::Attribute::ReadNone);
+        if ((i.flags & x86Intrinsic::AccessesMemory) == 0) {
+            fn->addFnAttr(llvm::Attribute::ReadNone);
         }
         fn->addFnAttr(llvm::Attribute::NoUnwind);
     }

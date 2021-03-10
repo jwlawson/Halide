@@ -1,5 +1,4 @@
 #include "CodeGen_Posix.h"
-
 #include "ConciseCasts.h"
 #include "Debug.h"
 #include "IRMatch.h"

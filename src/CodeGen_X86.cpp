@@ -103,7 +103,7 @@ struct x86Intrinsic {
     Target::Feature feature = Target::FeatureEnd;
     uint32_t flags = 0;
     enum Options {
-        AccessesMemory = 1 << 1,
+        AccessesMemory = 1 << 0,
     };
 };
 
